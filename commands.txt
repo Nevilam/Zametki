@@ -1,0 +1,2 @@
+обход админки через спавн шелла питон python3 -c 'import pty; pty.spawn("/bin/bash")'
+
